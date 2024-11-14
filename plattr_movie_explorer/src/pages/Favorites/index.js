@@ -18,23 +18,35 @@ const Favorites = () => {
 
     return (
         <div className="favorites-container">
-            <h1>Your Favorites</h1>
             {favorites.length === 0 ? (
-                <p>No favorite movies yet!</p>
+                <>
+                    <img 
+                    src='https://cdni.iconscout.com/illustration/premium/thumb/product-is-empty-illustration-download-in-svg-png-gif-file-formats--no-records-list-record-emply-data-user-interface-pack-design-development-illustrations-6430781.png?f=webp'
+                    className='no-movies-found' 
+                    alt='no favorite movies yet'
+                    />
+                    <h1>No Favorite movies yet</h1>
+                </>
+                
             ) : (
-                <div className="favorites-grid">
-                    {favorites.map(movie => (
-                        <div key={movie.imdbID} className="favorite-card">
-                            <img src={movie.Poster} alt={movie.Title} />
-                            <h3 className='movie-title'>{movie.Title}</h3>
-                            <p className='movie-year'>{movie.Year}</p>
-                            <Link className='details-link' to={`/movie/${movie.imdbID}`}>View Details</Link>
-                            <button onClick={() => removeFromFavorites(movie.imdbID)} className="remove-button">
-                                Remove
-                            </button>
-                        </div>
-                    ))}
-                </div>
+                <>
+                    <h1>Your Favorites</h1>
+                    <div className="favorites-grid">
+                        
+                        {favorites.map(movie => (
+                            <div key={movie.imdbID} className="favorite-card">
+                                <img className='poster' src={movie.Poster} alt={movie.Title} />
+                                <h3 className='movie-title'>{movie.Title}</h3>
+                                <p className='movie-year'>{movie.Year}</p>
+                                <Link className='details-link' to={`/movie/${movie.imdbID}`}>View Details</Link>
+                                <button onClick={() => removeFromFavorites(movie.imdbID)} className="remove-button">
+                                    Remove
+                                </button>
+                            </div>
+                        ))}
+                    </div>
+                </>
+                
             )}
         </div>
     );

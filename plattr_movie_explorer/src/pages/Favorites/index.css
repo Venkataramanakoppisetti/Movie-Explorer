@@ -10,6 +10,10 @@
     gap: 10px;
 }
 
+.poster {
+    height: 250px;
+}
+
 .remove-button {
     background-color: red;
     color: #fff;
