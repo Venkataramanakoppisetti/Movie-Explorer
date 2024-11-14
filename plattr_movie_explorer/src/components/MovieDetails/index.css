@@ -1,0 +1,45 @@
+.movie-detail-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.movie-detail-poster {
+    max-width: 300px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.movie-detail-info {
+    text-align: left;
+    max-width: 600px;
+}
+
+.movie-detail-info h1 {
+    margin-bottom: 20px;
+}
+
+.movie-detail-info p {
+    margin: 8px 0;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    font-size: 18px;
+}
+
+.favorite-button {
+    background-color: green;
+    color: #fff;
+    margin-left: 5px;
+    height: 40px;
+    border-width: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+}

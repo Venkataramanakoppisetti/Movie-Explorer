@@ -1,0 +1,21 @@
+.favorites-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.favorite-card {
+    gap: 10px;
+}
+
+.remove-button {
+    background-color: red;
+    color: #fff;
+    margin-left: 5px;
+    height: 40px;
+    border-width: 0px;
+    border-radius: 4px;
+    cursor: pointer;
+}
